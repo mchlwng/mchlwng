@@ -224,7 +224,7 @@ hr {
   }
   .index-header{
     height: 70vh;
-    margin: 0 0 0 50px;
+    margin: auto;
   }
   .nav-item, .navbar-light .navbar-nav .nav-link {
     text-align: center;
