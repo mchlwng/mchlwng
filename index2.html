@@ -22,8 +22,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Jost&family=Lora:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
 
   <!-- Bootstrap JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
   <!-- CSS Style Sheets -->
   <link rel="stylesheet" href="css/bootstrap.css">
@@ -53,64 +54,43 @@
 
 
 <!-- Body -->
-<body>
-
-  <div id="nav"></div>
-
-  <script>
-      $("#nav").load("navbar.html");
-  </script>
-  <!--#include file="navbar.shtml" -->
-
-  <!--Nav Bar -->
-  <!--
-  <script>
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-    var currentScrollPos = window.pageYOffset;
-    if (window.pageYOffset == 0) {
-      document.getElementById("navbar").style.boxShadow = "none";
-      }
-    else if (prevScrollpos > currentScrollPos || prevScrollpos == 0) {
-        document.getElementById("navbar").style.top = "0px";
-        document.getElementById("navbar").style.boxShadow = "0 1px #e4e4e4";
-      }
-      else {
-        document.getElementById("navbar").style.top = "-50px";
-      }
-      prevScrollpos = currentScrollPos;
-    }
-</script>
+<body  onload="myFunction()" style="margin:0;">
 
   <nav id="navbar" class="navbar navbar-expand-md navbar-light">
-    <a class="navbar-brand" href="index.html">mchlwng</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
-      <img id="burger" class="burger" src="images/burger-black.svg">
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">ABOUT</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#mywork">WORK</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">CONTACT</a>
-        </li>
-      </ul>
+    <div class="container">
+      <a class="navbar-brand" href="index.html">mchlwng</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+        <img id="burger" class="burger" src="images/burger-black.svg">
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#mywork">WORK</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">CONTACT</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </nav> -->
+  </nav>
+
   <!-- Title Section -->
-  <div class="container-fluid">
+  <div id="loader"></div>
+  <div style="display:none;" id="myDiv" class="animate-bottom">
+
+  <div class="container">
     <div class="section">
-      <div class="row">
-        <div class="col-md-5 order-md-12 order-lg-12 col-lg-5 col-xl-6 title-text col">
+      <div class="row index-header d-flex flex-wrap align-items-center">
+        <div class="col-md-5 order-md-12 title-text">
           <a href="index.html">
-            <img class="me" src="images/me-standing.svg">
+            <img class="me" src="images/me.svg">
           </a>
         </div>
-        <div class="col-md-7 col-lg-7 col-xl-6 my-auto title-text">
+        <div class="col-md-7 title-text">
           <a href="index.html">
             <h1>Hello,<br />I'm Michael.</h1>
             <h3>product manager & designer</h3>
@@ -132,7 +112,19 @@
         </div>
       </div>
     </div>
+    <script>
+      var myVar;
+      function myFunction() {
+        myVar = setTimeout(showPage, 500);
+      }
+      function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+      }
+    </script>
+  </div>
 <a href="#mywork"><hr /></a>
+
     <!-- Content 1 -->
     <div class="section">
       <h2 id="mywork" class="section-title">My Work</h2>
@@ -151,21 +143,18 @@
         </div>
       </div>
     </div>
-
-
-
   </div>
 </body>
 
 <!-- Footer -->
-<div class="container-fluid">
+<div class="container">
   <div class="row footer">
-    <div class="col-6 col-left">
+    <div class="col-8 col-left">
       <p>
         © 2020 mchlwng, developed and designed by Michael Wang.
       </p>
     </div>
-    <div class="col-6 col-right footer-right">
+    <div class="col-4 col-right footer-right">
       <a href="mailto:mwang@nyu.edu">
         <i class="fas fa-envelope fa-lg social" title="email"></i>
       </a>
