@@ -260,7 +260,6 @@ hr {
 .footer{
   display: block;
   width:100vw;
-  position: fixed;
   text-align: center;
   padding: 10px 0;
   margin: auto auto auto auto;
