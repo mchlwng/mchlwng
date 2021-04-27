@@ -29,7 +29,6 @@ h3 {
 
 p {
   font-family: 'Open Sans', sans-serif;
-  text-align: justify;
 }
 
 a, a:hover, h1:hover, a h2:hover, a h3:hover, a p:hover {
@@ -277,7 +276,6 @@ hr {
   padding: 0 10px;
   display: inline-block;
 }
-
 .social:hover {
   color: #00999B;
   opacity: 100%;
