@@ -34,35 +34,14 @@
   <title>mchlwng</title>
 
   <!-- Load Nav Bar -->
-  <div id="nav-placeholder">
+  <div id="nav"></div>
 
-</div>
-
-<script>
-$(function(){
-  $("#nav-placeholder").load("nav.html");
-});
-</script>
-
-
-<script>
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-    var currentScrollPos = window.pageYOffset;
-    if (window.pageYOffset == 0) {
-      document.getElementById("navbar").style.boxShadow = "none";
-      }
-    else if (prevScrollpos > currentScrollPos || prevScrollpos == 0) {
-        document.getElementById("navbar").style.top = "0px";
-        document.getElementById("navbar").style.boxShadow = "0 1px #e4e4e4";
-      }
-      else {
-        document.getElementById("navbar").style.top = "-50px";
-      }
-      prevScrollpos = currentScrollPos;
-    }
+  <script>
+    $(function(){
+      $("#nav").load("nav.html");
+    });
   </script>
-</head>
+
 
 
 
